@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: auto;
+}
+
+body {
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("https://i.pinimg.com/originals/eb/4e/1a/eb4e1ae6011a81a67e450c106e6b95d4.png");
+}
+
+.titleTag {
+    position: absolute;
+    top: 10%;
+    left: 48%;
+    color: hsl(194, 89%, 52%);
+}
+
+#form-input {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    box-shadow: 6px 6px 13px rgb(10, 10, 10),
+                6px 6px 13px rgba(8, 8, 8, 0.16);
+                background: rgb(2,0,36);
+                background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(140,224,18,1) 43%, rgba(0,212,255,1) 100%);
+    border-radius: 100px;
+    padding: 20px;
+    border: none;
+}
+
+#submit-tab {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+#input-item {
+    padding: 12px;
+    margin: auto;
+    border-radius: 100px;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#input-price {
+    padding: 12px;
+    margin: auto;
+    border-radius: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+
+.titleItem {
+    position: absolute;
+    right: 32%;
+    bottom: 65%;
+    color: rgb(29, 125, 235);
+}
+
+.titlePrice {
+    position: absolute;
+    left: 40%;
+    bottom: 65%;
+    color: rgb(29, 125, 235);
+}
+
+
