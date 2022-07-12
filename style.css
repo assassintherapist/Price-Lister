@@ -99,4 +99,6 @@ thead {
 
 a {
     background-color: rgb(228, 107, 107);
+    cursor: pointer;
+    border-radius: 5px;
 }
