@@ -1,104 +1,102 @@
 * {
     margin: 0;
-    padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    min-height: auto;
+    font-family: "Lato", sans-serif;
 }
 
 body {
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(184,211,224,1) 54%, rgba(148,187,233,1) 100%);
-
-    /* background image */
-
-  /*background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
-    background-image: url("https://i.pinimg.com/originals/eb/4e/1a/eb4e1ae6011a81a67e450c106e6b95d4.png");*/
+    background-color: rgb(25, 91, 223);
 }
 
-.header-class {
-    background-color: deepskyblue;
-}
-
-.titleTag {
-    position: absolute;
-    top: 3%;
+.title {
+    width: 500px;
+    position: relative;
     left: 44%;
-    color: hsl(194, 89%, 52%);
+    color: aliceblue;
+    margin-bottom: 30px;
+    font-size: 35px;
 }
 
-#form-input {
-    position: absolute;
-    top: 10%;
-    left: 38%;
-    box-shadow: 6px 6px 13px rgb(10, 10, 10),
-                6px 6px 13px rgba(8, 8, 8, 0.16);
-                background: rgb(2,0,36);
-                background: linear-gradient(90deg, rgba(2,0,36,1) -30%, rgba(140,224,18,1) 23%, rgba(0,212,255,1) 90%);
-    border-radius: 30px;
-    padding: 20px;
-    border: none;
+.contents {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 242, 245);
 }
 
-#submit-tab {
-    border-radius: 50px;
-    width: 50px;
-    height: 50px;
+.secondTitle {
+    position: relative;
+    left: 44%;
+    top: 10px;
+    font-size: 25px;
 }
 
-#input-item {
-    padding: 12px;
-    margin: auto;
-    border-radius: 100px;
-    font-size: medium;
+#divName {
+    position: relative;
+    left: 43%;
+    top: 23px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#divAmount {
+    position: relative;
+    left: 43%;
+    top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#name {
+    border-radius: 23px;
+    width: 150px;
+    font-size: 20px;
+    margin: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#input-price {
-    padding: 12px;
-    margin: auto;
-    border-radius: 100px;
+#amount {
+    border-radius: 23px;
+    width: 110px;
+    font-size: 20px;
+    margin: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
+}
+
+button {
+    position: relative;
+    left: 48%;
+    top: 56px;
+    margin-bottom: 10px;
     width: 100px;
-}
-
-.titlePrice {
-    position: absolute;
-    right: 37%; 
-    bottom: 65%;
-    color: rgb(214, 40, 40);
-}
-
-.titleItem {
-    position: absolute;
-    left: 37%;
-    bottom: 65%;
-    color: rgb(5, 4, 4);
-}
-
-#items {
-    position: relative;
-    top: 350px;
-    left: 35%;
-    font-size: x-large;
-    margin: 15px;
-    padding: 10px;
-}
-
-#items .delete-class {
-    position: relative;
-    top: 25px;
-    right: 70px;
-    background-color: rgb(241, 82, 82);
-    border-radius: 50px;
-    width: 60px;
     height: 30px;
-    font-style:italic;
+    border: none;
+    border-radius: 10px;
+    color:rgb(19, 19, 19);
+    background-color: rgb(28, 152, 214);
+    box-shadow: inset 0 0 0 #fff;
+    outline: none;
+    transition: ease-out 0.5s;
 }
 
+button:hover {
+    box-shadow: inset 300px 0 0 rgb(72, 245, 9);
+}
 
+.content {
+    padding: 3%;
+ 
+}
+
+table {
+    width: 100%;
+    
+}
+
+thead {
+    background-color: rgb(59, 210, 195);
+    line-height: 30px;
+}
+
+a {
+    background-color: rgb(228, 107, 107);
+}
