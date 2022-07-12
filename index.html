@@ -7,18 +7,57 @@
     <title>Price Lister</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-        <h1 class="titleTag">Price Lister</h1>
-        <div id="form-input">
-            <input type="text" id="input-item" placeholder="Enter the Item Here"/>
-            <input type="number" id="input-price" placeholder="Item Price"/>
-            <input type="submit" id="submit-tab" value="Add"/>
+<br>
+
+    <header class="header">
+        <h1 class="title">Price Lister</h1>
+    </header>
+
+    <section class="contents">
+        <h3 class="secondTitle">
+            Add a new Item:
+        </h3>
+
+        <div class="form">
+            <form id="expForm">
+
+                <div id="divName" class="formLine-right">
+                    <span for="name">Name:</span>
+                    <input type="text" id="name">
+                </div>
+
+                <div id="divAmount" class="formLine-right">
+                    <span for="name">Amount:</span>
+                    <input type="number" id="amount">
+                </div>
+
+                <button type="submit" class="buttonSave">
+                    Add
+                </button>         
+            </form>
         </div>
-  
-    <h2 class="titleItem">Item</h2> <h2 class="titlePrice">Price</h2>
+        <br></br>
+        <br></br>
+       
+    </section>
 
-    <div id="items"> </div>
+    <section class="content">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
 
-    <script src="main.js"></script>    
+            <tbody id="expenseTable">
+                
+            </tbody>
+
+        </table>
+    </section>
+
+    <script src="app.js"></script>
 </body>
 </html>
