@@ -1,32 +1,58 @@
-const section = document.getElementById("items")
-const inputPrice = document.getElementById("input-price")
-const inputItem = document.getElementById("input-item")
-const addBtn = document.getElementById("submit-tab")
+document.getElementById("expForm").addEventListener("submit", addExpense);
 
-addBtn.addEventListener("click", () => {
-    let task = document.createElement("li");
-    task.innerText = `${inputItem.value}----------------------------`+ `${inputPrice.value}`;
+const expenses = JSON.parse(localStorage.getItem("expenses")) || [];
 
-    let deleteBtn = document.createElement("button");
-    deleteBtn.classList.add("delete-class");
-    deleteBtn.innerText = "Delete";
-    
-    
-    if (inputItem.value === "") {
-        alert ("Please enter any item")
-    } else if (inputPrice.value === ""){
-        alert("Please enter any value")
-    } else {
-        section.appendChild(deleteBtn)
-        section.appendChild(task);
+function addExpense(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let amount = document.getElementById("amount").value;
+
+    if(name.length > 0 && amount > 0) {
+        const expense = {
+            name,
+            amount,
+            id: expenses.length > 0 ? expenses[expenses.length - 1].id + 1: 1,
+        }
+        expenses.push(expense);
+        localStorage.setItem("expenses", JSON.stringify(expenses));
     }
 
-    deleteBtn.addEventListener("click", () => {
-        section.removeChild(task);
-        section.removeChild(deleteBtn);
-    })
+    document.getElementById("expForm").reset();
 
-    inputItem.value = "";
-    inputPrice.value = "";
-});
-    
+    showExpenses();
+
+}
+
+const showExpenses = () => {
+      const expenseTable = document.getElementById("expenseTable");
+
+      expenseTable.innerHTML = "";
+      
+      for(let i = 0; i < expenses.length; i++) {
+        expenseTable.innerHTML += `
+        
+        <tr>
+        <td>${expenses[i].name}</td>
+        <td>${expenses[i].amount}</td>
+        <td> <a class="deleteButton" onclick="deleteExpenses(${expenses[i].id})"> Delete </td>
+        <td></td>
+        </tr>
+        
+        `;
+
+      }
+}
+
+const deleteExpenses = (id) => {
+    for(let i = 0; i < expenses.length; i++) {
+        if(expenses[i].id == id) {
+            expenses.splice(i, 1);
+        }
+    }
+
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+    showExpenses();
+}
+
+showExpenses();
