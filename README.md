@@ -1,1 +1,1 @@
-# Easy Price Lister
+#Simple and Easy Price Lister
