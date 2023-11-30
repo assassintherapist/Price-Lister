@@ -39,3 +39,4 @@ function deleteRow(e){
     const btn = e.target;
     btn.closest('tr').remove()
 }
+//hi
